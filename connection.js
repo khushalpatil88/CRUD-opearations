@@ -7,7 +7,7 @@ var mysqlconnection = mysql.createConnection({
     database: "delta_app"
   });
 
-  var connection =mysqlconnection.connect((err)=>{
+  mysqlconnection.connect((err)=>{
     if(err){
         console.log('error in db connection '+json.Stringify(err,undefined,2));
     }else{
@@ -15,4 +15,4 @@ var mysqlconnection = mysql.createConnection({
     }
   })
 
-  module.exports=connection
+  module.exports=mysqlconnection
